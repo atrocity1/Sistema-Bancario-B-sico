@@ -20,11 +20,11 @@ public class program{
 		{
 			cadastro();
 		}
-		Console.WriteLine(opcoes[0]);
-		Console.WriteLine(opcoes[1]);
-		Console.WriteLine(opcoes[2]);
-		Console.WriteLine(opcoes[3]);
-		Console.WriteLine(opcoes[4]);
+
+		foreach (var opcao in opcoes)
+		{
+			Console.WriteLine(opcao);
+		}
 		int escolha = int.Parse(Console.ReadLine());
 		switch(escolha){
 			case 1:

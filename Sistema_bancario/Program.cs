@@ -1,6 +1,7 @@
 ﻿using Sistema_bancario;
 
 public class program{
+	static cliente cliente = new cliente();
 
 	public static void Main(string[] args)
 	{
@@ -9,7 +10,7 @@ public class program{
 
 	static void menu()
 	{
-		cliente cliente = new cliente();
+		
 		string[] opcoes =
 		{
 			"1- Sacar", "2- Depositar", "3- Ajuda", "4- Sair ", "5- Creditos"
@@ -46,7 +47,7 @@ public class program{
 	}
 	static void cadastro()
 	{
-		cliente cliente = new cliente();
+		
 		if(cliente.cadastradoo == false){
 			Console.WriteLine("Para continuar precisamos de algumas informações.");
 			Console.WriteLine("Diga seu nome: ");
@@ -68,7 +69,7 @@ public class program{
 
 	static void Sacar()
 	{
-		cliente cliente = new cliente();
+		
 		if (cliente.saldo < 0)
 		{
 			Console.WriteLine("Você não pode sacar nada pois tem 0 no saldo");
@@ -92,7 +93,7 @@ public class program{
 	}
 	static void Depositar()
 	{
-		cliente cliente = new cliente();
+		
 		Console.WriteLine("Digite o valor que deseja sacar: ");
 		int valordodeposito = int.Parse(Console.ReadLine());
 		cliente.saldo += valordodeposito;
